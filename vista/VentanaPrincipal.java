@@ -29,17 +29,17 @@ public class VentanaPrincipal extends JFrame
 
         //Creación y adición del PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,225,370,210);
+        miPanelOperaciones.setBounds(10,225,170,175);
         this.add(miPanelOperaciones);
 
         //Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10,400,380,180);
+        miPanelResultados.setBounds(180,225,180,175);
         this.add(miPanelResultados);
 
         //Caracteristicas de la ventana
         this.setTitle("Libros para guardar");
-        this.setSize(380,450);
+        this.setSize(380,445);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);

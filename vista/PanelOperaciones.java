@@ -30,33 +30,33 @@ public class PanelOperaciones extends JPanel
         this.setBackground(Color.WHITE);
 
         //Crear y agregar boton Agregar plan
-        btAgregarColeccion = new JButton("Agregar libro de coleccion");
-        btAgregarColeccion.setBounds(75,40,210,20);
+        btAgregarColeccion = new JButton("Libro de colección");
+        btAgregarColeccion.setBounds(10,40,150,20);
         btAgregarColeccion.setActionCommand("coleccion");
         this.add(btAgregarColeccion);
 
         //Crear y agregar boton guadar libro
         btGuardarLibro = new JButton("Guardar libro");
-        btGuardarLibro.setBounds(75,70,210,20);
+        btGuardarLibro.setBounds(10,70,150,20);
         btGuardarLibro.setActionCommand("guardar");
         this.add(btGuardarLibro);
 
         //Crear y agregar boton Eleminar
         btEleminar = new JButton("Eliminar");
-        btEleminar.setBounds(75,100,210,20);
+        btEleminar.setBounds(10,100,150,20);
         btEleminar.setActionCommand("eliminar");
         this.add(btEleminar);
 
         //Crear y agregar boton Salir
         btSalir = new JButton("Salir");
-        btSalir.setBounds(75,130,210,20);
+        btSalir.setBounds(10,130,150,20);
         btSalir.setActionCommand("salir");
         this.add(btSalir);
     
     
 
         //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
+        TitledBorder borde = BorderFactory.createTitledBorder("Opciones");
         borde.setTitleColor(Color.BLUE);
         this.setBorder(borde);
     }

@@ -13,8 +13,8 @@ public class PanelEntradaDatos extends JPanel
     //----------------------
     // Atributos
     //----------------------
-    private JLabel lbOperadores;
-    private JComboBox<String> cbOperadores;
+    private JLabel lbEdicionLujo;
+    private JComboBox<String> cbEdicionLujo;
 
     private JLabel lbNombre;
     private JTextField tfNombre;
@@ -22,9 +22,7 @@ public class PanelEntradaDatos extends JPanel
     private JTextField tfAutor;
     private JLabel lbAnioEdicion;
     private JTextField tfAnioEdicion;
-    private JLabel lbEdicionLujo;
-    private JTextField tfEdicionLujo;
-
+    
     //----------------------
     // Metodos
     //----------------------
@@ -64,14 +62,17 @@ public class PanelEntradaDatos extends JPanel
         tfAnioEdicion.setBounds(150, 120, 100, 25);
         this.add(tfAnioEdicion);
 
-        lbEdicionLujo = new JLabel("Edicion de lujo: ");
-        lbEdicionLujo.setBounds(40, 155, 140, 20);
+        //Crear y agregar etiqueta Operadores
+        lbEdicionLujo = new JLabel("Edicion de lujo : ", JLabel.RIGHT);
+        lbEdicionLujo.setBounds(32,150,100,20);
         this.add(lbEdicionLujo);
 
-        
-        tfEdicionLujo = new JTextField();
-        tfEdicionLujo.setBounds(150, 155, 100, 25);
-        this.add(tfEdicionLujo);
+        //Crear y agregar combo lista operadores (claro, movistar, tigo, Wom)
+        cbEdicionLujo = new JComboBox<String>();
+        cbEdicionLujo.setBounds(150,150,100,20);
+        cbEdicionLujo.addItem("Incluye");
+        cbEdicionLujo.addItem("No incluye");
+        this.add(cbEdicionLujo);
 
 
     }
@@ -80,17 +81,17 @@ public class PanelEntradaDatos extends JPanel
 
     public String getTxtOperadores()
     {
-        return (String) cbOperadores.getSelectedItem();
+        return (String) cbEdicionLujo.getSelectedItem();
     }
 
     public void setTxtOperadores(String sal)
     {
-        cbOperadores.addItem(sal);
+        cbEdicionLujo.addItem(sal);
     }
 
     public void setIndexOperadores(int index)
     {
-        cbOperadores.setSelectedIndex(index);
+        cbEdicionLujo.setSelectedIndex(index);
     }
 
     public String getTxtNombre()
@@ -123,14 +124,5 @@ public class PanelEntradaDatos extends JPanel
         tfAnioEdicion.setText(anioEdicion);
     }
 
-    public String getTxtEdicionLujo()
-    {
-        return tfEdicionLujo.getText();
-    }
-
-    public void setTxtEdicionLujo(String edicionLujo)
-    {
-        tfEdicionLujo.setText(edicionLujo);
-    }
 
 }
