@@ -7,10 +7,15 @@ Se necesita escribir las clases necesarias y una aplicación para registrar la i
  el nombre de la colección y el número que ocupa el libro en la colección.  La única aclaración adicional es que
  si se trata de un libro con mas de dos autores quiere guardar el primer autor, y el nombre del segundo debe
  aparecer “y otros”.
+ El usuario debe poder ingresar los datos de los libros
 
 # Analisis del problema
 Se crea una carpeta llamada modelo que contenga las clases Libro y Coleccion, las cuales se encargaran de guardar la informacion de los Libro y las Coleccion respectivamente.
 
 En la clase Libro tendra los atributos nombre, autor, año, edicion, y en la clase Coleccion tendra los atributos nombre, autor, año, edicion, nombreColeccion, numeroColeccion.
+
+
+# Ejecucion por consola
+![diagrama de clases](CasoConsola.png "Diagrama de clases")
 
 

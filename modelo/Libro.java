@@ -9,17 +9,18 @@ public class Libro
     //el nombre de la colección y el número que ocupa el libro en la colección.  La única aclaración adicional es que
     //si se trata de un libro con mas de dos autores quiere guardar el primer autor, y el nombre del segundo debe
     //aparecer “y otros”.
+    //El usuario debe poder ingresar los datos de los libros
 
     // Atributos
     private String nombre;
     private String autor;
     private String anioEdicion;
-    private boolean edicionLujo;
+    private String edicionLujo;
 
     // Metodos
 
     // Constructor
-    public Libro(String nombre, String autor, String anioEdicion, boolean edicionLujo) {
+    public Libro(String nombre, String autor, String anioEdicion, String edicionLujo) {
         this.nombre = nombre;
         this.autor = autor;
         this.anioEdicion = anioEdicion;
@@ -39,7 +40,7 @@ public class Libro
         return anioEdicion;
     }
 
-    public boolean isEdicionLujo() {
+    public String isEdicionLujo() {
         return edicionLujo;
     }
 
@@ -58,9 +59,25 @@ public class Libro
         this.anioEdicion = anioEdicion;
     }
 
-    public void setEdicionLujo(boolean edicionLujo) {
+    public void setEdicionLujo(String edicionLujo) {
         this.edicionLujo = edicionLujo;
     }
+
+    // Metodo para saber si el libro tiene edicion de lujo si el atributo es igual a "si" o "no"
+    public String edicionLujo() {
+        if (edicionLujo.equals("si")) {
+            return "El libro tiene edición de lujo";
+        } else {
+            return "El libro no tiene edición de lujo";
+        }
+    }
     
+
+    // toString
+    @Override
+    public String toString() {
+        return "_____________________"+"\nNombre: " + nombre + "\nAutor: " + autor + "\nAño de edición: " + anioEdicion + "\nEdición de lujo: " + edicionLujo;
+    }
+
 
 }
