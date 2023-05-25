@@ -14,8 +14,13 @@ Se crea una carpeta llamada modelo que contenga las clases Libro y Coleccion, la
 
 En la clase Libro tendra los atributos nombre, autor, año, edicion, y en la clase Coleccion tendra los atributos nombre, autor, año, edicion, nombreColeccion, numeroColeccion.
 
+# Diagrama de clases
+![diagrama de clases](diagramaEstudio.png "Diagrama de clases")
 
 # Ejecucion por consola
 ![diagrama de clases](CasoConsola.png "Diagrama de clases")
+
+
+
 
 
